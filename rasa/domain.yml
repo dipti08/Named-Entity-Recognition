@@ -1,0 +1,103 @@
+intents:
+  - greet
+  - hello
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - programming_language
+  - organisation
+  - technology
+  - product
+  - ask_about_intent
+  - python_link
+
+actions:
+  - utter_greet
+  - utter_cheer_up
+  - utter_did_that_help
+  - utter_happy
+  - utter_goodbye
+  - utter_iamabot
+  - utter_lang
+  - utter_organisation
+  - utter_technology
+  - utter_product
+  - utter_ask
+  - utter_robo_greet
+  - utter_robo_bye
+  - utter_more
+  - utter_python_link
+  - action_hello_world
+  - action_lang
+  - action_organisation
+  - action_technology
+  - action_product
+  - action_python_link
+
+entities:
+  - lang
+  - org
+  - tech
+  - prod
+
+responses:
+  utter_python_link:
+  - text: "Click here [] {link} for Python tutorials."
+
+  # utter_hpe_link:
+  # - text: "Click [here](https://www.hpe.com/us/en/home.html) to know about Hewlett Packard Enterprise."
+
+  utter_robo_greet:
+  - text: "Hi! How may I help you?"
+
+  utter_robo_bye:
+  - text: "Thanks for using our service."
+
+  utter_ask:
+  - text: "Sure! Enter you query:"
+
+  utter_more:
+  - text: "Would you like to search more?"
+    buttons:
+      - title: "Yes"
+        payload: "/ask_about_intent"
+      - title: "No"
+        payload: "/goodbye"
+
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_lang:
+  - text: "Hey user! You have mentioned a programming language in your text."
+
+  utter_organisation:
+  - text: "Hey user! You have an organisation in your text."
+
+  utter_technology:
+  - text: "Hey user! You have mentioned a latest technology in your text."
+
+  utter_product:
+  - text: "Hey user! You have mentioned some kind of product in your text."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
