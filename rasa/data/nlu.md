@@ -1,3 +1,4 @@
+<!-- this file consists of different types of intents that the user can have while talking with the bot -->
 ## intent:greet
 - hey
 - hello
@@ -10,22 +11,14 @@
 - hey robot
 - hello robot
 
-## intent:python_link
-- How can I learn Python programming?
-- Suggest me some way to master coding in Python?
-- What are the best python tutorials?
-- Can you help me learn python?
-
-<!-- ## intent:hpe_link
-- Tell me something about Hewlett Packard Enterpise.
-- Take me to the official site of HPE.
-- Can you tell me how HPE works?
-- Is Hewlett Packard Enterprise also called HPE in short? -->
-
+<!-- the users asks the bot if it can tag the required query -->
 ## intent:ask_about_intent
 - I would like to query about a product.
 - I would like to ask about a product.
 - I want to know the tag of my Company.
+- I want to know about programming language.
+- Tag my query.
+- Can you tell the tags of my query?
 - What entity can be used to tag a programming language?
 - Can I know something about the latest technology?
 - Can you tell something about the latest products?
@@ -35,42 +28,210 @@
 - Tell me about organisation.
 - Discuss about technologies.
 
-## intent:hello
-- world
-- programming
-- world hello programming
-
-## intent:programming_language
-- The most used language is [Python](lang)
+<!-- custom entities for the dataset: lang,tech,org,prod -->
+## intent:mul_sen
+- The most used language is [python](lang)
+- [json](lang) is used to send information on the server
+- Many companies [javascript](lang) for their work
+- [java](lang) is platform independent
+- [node js](lang) is an open-source, cross-platform, [javaScript](lang) runtime environment 
+- The [java](lang) syntax is strictly an object-oriented programming language
+- [json](lang) is used to send information on the server
+- What are the key features of [python](lang)?
+- What is [java](lang) programming?
+- What is [java](lang)?
+- You know [mongodb](lang)?
+- Which product use [javascript](lang)?
+- [c#](lang) is good for development language
+- [json](lang) format is used in [node js](lang)
+- [mongodb](lang) is almost 100 times faster than traditional database
+- [c#](lang) is used in used by many companies
+- [node js](lang) and [mongodb](lang) use asynchronous functions
+- [json](lang) scripts are written in key-value format
+- [python](lang) is used in many products today
+- People prefer [javascript](lang) over Java
+- [javascript](lang) is most used language
+- Regardless, [c#](lang) is much faster in most cases
+- Today, we can also code in [c#](lang)
+- What is [mongodb](lang) usefull for?
+- [java](lang) can help reduce costs, drive innovation, & improve application services
+- If you install [mongodb](lang) you will be able to see the [javascript](lang) language interpreter is installed by default
+- [mongodb](lang) is almost 100 times faster than traditional database
+- [node js](lang) has the fastest run time among all programming languages
+- [google](org) is the best
+- [hpe](org) look for people who are efficient in programming language
+- [hewlett packard enterprise](org) Company is an American multinational enterprise
+- [samsung](org) is growing big year by year
+- [apple](org) has launched its new phone which has the latest technology
+- Watch movies on [amazon](org) prime
+- [samsung](org) released its new galaxy X
+- [google](org) has the best SEO
+- As long as [apple](org) continues to innovate
+- [apple](org) Inc. is an American multinational technology company
+- Who found [google](org)?
+- [samsung](org) is a good company
+- Do you know that [hpe](org) deals with the enterprise products and services
+- Do you know about [samsung](org) establishment?
+- People share their thoughts through [facebook](org) stories
+- [google](org), [microsoft](org), and [amazon](org) are big software companies
+- [hewlett packard enterprise](org) is located in Bangalore
+- We can buy grocery from [amazon](org) pantry
+- You can advertise your new shop location on [instagram](org)
+- [amazon](org) will have a big Indian sale
+- Bill Gates found [microsoft](org)
+- I prefer Apple over [samsung](org) 
+- Almost everyone uses [facebook](org) nowadys
+- [instagram](org) is used as the best sharing platform
+- [instagram](org) is just great example of a gigantic tech
+- This is [technology](tech)
+- Many organization use [nlp](tech) for better translations
+- [machine learning](tech) focuses on the development of computer programs
+- This century brings boost in [technology](tech)
+- How difficult is [machine learning](tech)?
+- [nlp](tech) is one of the latest technology in field of data science
+- [unity](tech) development is the best for gamers
+- [machine learning](tech) and [artificial intelligence](tech) is trending nowadays
+- Gamers use [unity](tech) to develop good playstations
+- [artificial intelligence](tech) can produce excellent outcomes
+- My personal advice is try to do a simple project in [unity](tech) first
+- [nlp](tech) consists of extraction of meanings from sentences
+- Many organization use [nlp](tech) for better translations
+- I will use [nlp](tech) to ectract entities from the text
+- [nlp](tech) is used by most of the data scientists
+- There are many free courses to learn [machine learning](tech)
+- Next generation will the power that the use of [artificial intelligence](tech) will hold
+- [artificial intelligence](tech) is the future
+- I took a free course on [unity](tech) for learning
+- Supervised learning algorithms are the most used [machine learning](tech) algorithms
+- [nlp](tech) has many applications
+- When will you show your new [watch](prod)?
+- An intelligent [robot](prod) can perform many tasks 
+- The company launches a new [phone](prod)
+- I will work on my [Tablet](prod)
+- Making a [game](prod) is fun
+- I have an [ipad](prod)
+- I bought a cleaning [robot](prod)
+- Can you buy me a [tablet](prod) for my birthday?
+- I got [watch](prod) as a gift
+- You can gift him the latest [phone](prod)
+- Using [ipad](prod) and [tablet](prod) has made our lives easy
+- A [phone](prod) is the essential element today 
+- Use your [watch](prod) to know the correct time
+- A [robot](prod) can play board [game](prod) as efficiently as a human
+- I gifted a [tablet](prod) to my friend on his Birthday 
+- Go buy a new [phone](prod)! 
+- What is [robot](prod)?
+- He is the best at [game](prod) development
+- I want to buy a small [tablet](prod)
+- See your [watch](prod) to know the correct time
+- Currently I am learning to build my own [game](prod)
+- I got a [phone](prod) call from my friend
+- [tablet](prod) can also be used to talk as a phone
+- [ipad](prod) is very smooth to work with
+- Hey [robot](prod), cook food!
+- My [robot](prod) plays with me
+- [samsung](org) use [python](lang) technology
+- What are the key features of [python](lang)?
+- How is [python](lang) an interpreted language?
+- The company has recently moved to [python](lang) 3 and [instagram](org) is just great example of a gigantic tech
+- [javascript](lang) is latest technology
+- Which language you use most often, [javascript](lang) or [python](lang)
+- [hpe](org) look for people who are efficient in [javascript](lang) and can code in less time
+- [hpe](org) makes use of [javascript](lang)
+- In today's world, [facebook](org) highly uses [machine learning](tech)
+- [google](org), [facebook](org), [hpe](org) are shifting to [machine learning](tech) for better products
+- [nlp](tech) is one of the latest technology in field of [data science](tech)
+- [nlp](tech) consists of extraction of meanings from sentences
+- [Python](lang) is mainly used for [nlp](tech)
+- What are the languages used in [nlp](tech)
+- [machine learning](tech) and [nlp](tech) are programmed using [python](lang) in [facebook](org) [google](org) etc
+- Many organization use [nlp](tech) for better translations
+- [c#](lang) is used in [unity](tech) [game](prod) development
+- [apple](org) has launched its new [phone](prod) which has the latest technology
+- [google](org), [microsoft](org), and [amazon](org) are big software companies
+- [machine learning](tech) and [artificial intelligence](tech) is trending nowadays
+- [hewlett packard enterprise](org) Company is an American multinational enterprise
+- [node js](lang) and [mongodb](lang) use asynchronous functions
+- You can advertise your new [watch](prod) shop location on [instagram](org)
+- You can gift him the latest [samsung](org) [phone](prod)
+- Do you want the [apple](org) [ipad](prod)
+- Nowadays, everyone has a [ipad](prod) or [tablet](prod) are handy to carry
+- [unity](tech) is a great tool for gamers to develop a [game](prod)
+- One of the main technology used in making [game](prod) is [unity](tech)
+- [artificial intelligence](tech) can make excellent [robot](prod)
+- I prefer using [apple](org) products over [samsung](org)
+- [apple](org) launches a new [phone](prod)
+- [hpe](org) also known as [hewlett packard enterprise](org) focuses on enterprise products and services
+- [c#](lang) and [unity](tech) help in [game](prod) development
+- My personal advice is try to do a simple [game](prod) project in [unity](tech) first
+- If you install [mongodb](lang) you will be able to see the [javascript](lang) language interpreter is installed by default
+- Using [ipad](prod) and [tablet](prod) has made our lives easy
+- [json](lang) is highly used in [amazon](org) and [samsung](org) for [artificial intelligence](tech)
+- [whatsapp](org) and [amazon](org) uses [mongodb](lang) and [json](lang) for new development
+- [json](lang) and [node js](lang) are very important for upcomimg technology
+- [amazon](org), [whatsapp](org) and [samsung](org) are big companies in today's world
+- Does [node js](lang) is used in [game](prod) development
+- [web development](tech) can be learned by anyone for both [frontend development](tech) and [backend development](tech)
+- [facebook](org) and [whatsapp](org) are using [artificial intelligence](tech) and [nlp](tech) for new projects
+- [hewlett packard enterprise](org) is making new [game](prod) and [robot](prod) using [unity](tech)
+- [tablet](prod) and [game](prod) are developed using [unity](tech)
+- [artificial intelligence](tech) is used in [tablet](prod) and [phone](prod) for better technology
+- [robot](prod) is one huge application of [artificial intelligence](tech) and [machine learning](tech)
+- Latest [ipad](prod) makes use of [artificial intelligence](tech) for better performance
+- [javascript](lang) programmer receives decent salary in India
+- [google](org) uses [java](lang) programming language to build and develop docs application
+- [apple](org) [ipad](prod) Pro now on sale in India
+- [backend development](tech) professionals who work on [sql](lang) are difficult to find
+- [frontend development](tech) users wokring on [html](lang), [css](lang) and [react js](lang) are more in number
+- using [html](lang), [css](lang), [sql](lang), [frontend development](tech) and [backend development](tech) can be learnt together 
+- [backend development](tech) and [frontend development](tech) courses are available on net using [html](lang), [css](lang), [sql](lang)
+- I love [web development](tech) using [react js](lang) because it helps make responsive pages for [frontend development](tech)
+- Using database means working for [backend development](tech)
+- [microsoft](org) corporation is an America based technology company
+- The main mission of [microsoft](org) is to help people throughout the India
+- [hpe](org) is demanding latest [chatbot](prod) using [nlp](tech)
+- [chatbot](prod) is very common these days
+- The best application of [nlp](tech) and [data science](tech) is [chatbot](prod)
+- [data science](tech) is trending today
+- Data analysts use [data science](tech)
+- I would like to pursue [data science](tech) as my career
+- [docker](tech) is one of the emerging technology
+- People today are earning with the help of [web development](tech)
+- High performance containers are developed using [docker](tech)
+- In today's technology world, [docker](tech) is serving a huge purpose
+- [react js](lang) is highly used in [web development](tech)
+- Along with [html](lang), [react js](lang) is used for [frontend development](tech)
+- [web development](tech) requires [html](lang), [css](lang) and [react js](lang)
+- [sql](lang) and [mongoDB](lang) are used for efficient [backend development](tech)
+- [html](lang), [css](lang) and [javascript](lang) and [react js](lang) are mainly used for frontend development
+- The most used language is [Python](lang).
 - [JSON](lang) is used to send information on the server
 - Many companies [Javascript](lang) for their work
 - [Java](lang) is platform independent
-- [Node.js](lang) is an open-source, cross-platform, [JavaScript](lang) runtime environment 
+- [Node js](lang) is an open-source, cross-platform, [Javascript](lang) runtime environment 
 - The [Java](lang) syntax is strictly an object-oriented programming language
 - [JSON](lang) is used to send information on the server
 - What are the key features of [Python](lang)?
 - What is [Java](lang) programming?
 - What is [Java](lang)?
-- You know [MongoDB](lang)?
+- You know [Mongodb](lang)?
 - Which product use [Javascript](lang)?
 - [C#](lang) is good for development language
-- [JSON](lang) format is used in [Node.js](lang)
-- [MongoDB](lang) is almost 100 times faster than traditional database
+- [JSON](lang) format is used in [Node js](lang)
+- [Mongodb](lang) is almost 100 times faster than traditional database
 - [C#](lang) is used in used by many companies
-- [Node.js](lang) and [MongoDB](lang) use asynchronous functions
+- [Node js](lang) and [Mongodb](lang) use asynchronous functions
 - [JSON](lang) scripts are written in key-value format
 - [Python](lang) is used in many products today
 - People prefer [Javascript](lang) over Java
 - [Javascript](lang) is most used language
 - Regardless, [C#](lang) is much faster in most cases
 - Today, we can also code in [C#](lang)
-- What is [MongoDB](lang) usefull for?
+- What is [Mongodb](lang) usefull for?
 - [Java](lang) can help reduce costs, drive innovation, & improve application services
-- If you install [MongoDB](lang) you will be able to see the [JavaScript](lang) language interpreter is installed by default
-- [MongoDB](lang) is almost 100 times faster than traditional database
-- [Node.js](lang) has the fastest run time among all programming languages
-
-## intent:organisation
+- If you install [Mongodb](lang) you will be able to see the [Javascript](lang) language interpreter is installed by default
+- [Mongodb](lang) is almost 100 times faster than traditional database
+- [Node js](lang) has the fastest run time among all programming languages
 - [Google](org) is the best
 - [HPE](org) look for people who are efficient in programming language
 - [Hewlett Packard Enterprise](org) Company is an American multinational enterprise
@@ -96,8 +257,6 @@
 - Almost everyone uses [Facebook](org) nowadys
 - [Instagram](org) is used as the best sharing platform
 - [Instagram](org) is just great example of a gigantic tech
-
-## intent:technology
 - This is [technology](tech)
 - Many organization use [NLP](tech) for better translations
 - [Machine Learning](tech) focuses on the development of computer programs
@@ -119,40 +278,129 @@
 - I took a free course on [Unity](tech) for learning
 - Supervised learning algorithms are the most used [Machine Learning](tech) algorithms
 - [NLP](tech) has many applications
-
-## intent:product
-- When will you show your new [watch](prod)?
-- An intelligent [robot](prod) can perform many tasks 
-- The company launches a new [phone](prod)
+- When will you show your new [Watch](prod)?
+- An intelligent [Robot](prod) can perform many tasks 
+- The company launches a new [Phone](prod)
 - I will work on my [Tablet](prod)
-- Making a [game](prod) is fun
-- I have an [iPad](prod)
-- I bought a cleaning [robot](prod)
+- Making a [Game](prod) is fun
+- I have an [Ipad](prod)
+- I bought a cleaning [Robot](prod)
 - Can you buy me a [Tablet](prod) for my birthday?
-- I got [watch](prod) as a gift
-- You can gift him the latest [phone](prod)
-- Using [iPad](prod) and [Tablet](prod) has made our lives easy
-- A [phone](prod) is the essential element today 
-- Use your [watch](prod) to know the correct time
-- A [robot](prod) can play board [game](prod) as efficiently as a human
+- I got [Watch](prod) as a gift
+- You can gift him the latest [Phone](prod)
+- Using [Ipad](prod) and [Tablet](prod) has made our lives easy
+- A [Phone](prod) is the essential element today 
+- Use your [Watch](prod) to know the correct time
+- A [Robot](prod) can play board [Game](prod) as efficiently as a human
 - I gifted a [Tablet](prod) to my friend on his Birthday 
-- Go buy a new [phone](prod)! 
-- What is [robot](prod)?
-- He is the best at [game](prod) development
+- Go buy a new [Phone](prod)! 
+- What is [Robot](prod)?
+- He is the best at [Game](prod) development
 - I want to buy a small [Tablet](prod)
-- See your [watch](prod) to know the correct time
-- Currently I am learning to build my own [game](prod)
-- I got a [phone](prod) call from my friend
+- See your [Watch](prod) to know the correct time
+- Currently I am learning to build my own [Game](prod)
+- I got a [Phone](prod) call from my friend
 - [Tablet](prod) can also be used to talk as a phone
-- [iPad](prod) is very smooth to work with
-- Hey [robot](prod), cook food!
-- My [robot](prod) plays with me
+- [Ipad](prod) is very smooth to work with
+- Hey [Robot](prod), cook food!
+- My [Robot](prod) plays with me
+- [Samsung](org) use [Python](lang) technology
+- What are the key features of [Python](lang)?
+- How is [Python](lang) an interpreted language?
+- The company has recently moved to [Python](lang) 3 and [Instagram](org) is just great example of a gigantic tech
+- [Javascript](lang) is latest technology
+- Which language you use most often, [Javascript](lang) or [Python](lang)
+- [HPE](org) look for people who are efficient in [Javascript](lang) and can code in less time
+- [HPE](org) makes use of [Javascript](lang)
+- In today's world, [Facebook](org) highly uses [Machine Learning](tech)
+- [Google](org), [Facebook](org), [HPE](org) are shifting to [Machine Learning](tech) for better products
+- [NLP](tech) is one of the latest technology in field of [Data Science](tech)
+- [Data Science](tech) is trending today
+- Data analysts use [Data Science](tech)
+- I would like to pursue [Data Science](tech) as my career
+- [Data Science](tech) will lead to evolution in the future
+- [NLP](tech) consists of extraction of meanings from sentences
+- [Python](lang) is mainly used for [NLP](tech)
+- What are the languages used in [NLP](tech)
+- [Machine Learning](tech) and [NLP](tech) are programmed using [Python](lang) in [Facebook](org) [Google](org) etc
+- Many organization use [NLP](tech) for better translations
+- [C#](lang) is used in [Unity](tech) [game](prod) development
+- [Apple](org) has launched its new [phone](prod) which has the latest technology
+- [Google](org), [Microsoft](org), and [Amazon](org) are big software companies
+- [Machine Learning](tech) and [Artificial Intelligence](tech) is trending nowadays
+- [Hewlett Packard Enterprise](org) Company is an American multinational enterprise
+- [Node js](lang) and [Mongodb](lang) use asynchronous functions
+- You can advertise your new [Watch](prod) shop location on [Instagram](org)
+- You can gift him the latest [Samsung](org) [Phone](prod)
+- Do you want the [Apple](org) [Ipad](prod)
+- Nowadays, everyone has a [Ipad](prod) or [Tablet](prod) are handy to carry
+- [Unity](tech) is a great tool for gamers to develop a [Game](prod)
+- One of the main technology used in making [Game](prod) is [Unity](tech)
+- [Artificial Intelligence](tech) can make excellent [Robot](prod)
+- I prefer using [Apple](org) products over [Samsung](org)
+- [Apple](org) launches a new [Phone](prod)
+- [HPE](org) also known as [Hewlett Packard Enterprise](org) focuses on enterprise products and services
+- [C#](lang) and [Unity](tech) help in [Game](prod) development
+- My personal advice is try to do a simple [Game](prod) project in [Unity](tech) first
+- If you install [Mongodb](lang) you will be able to see the [Javascript](lang) language interpreter is installed by default
+- Using [Ipad](prod) and [Tablet](prod) has made our lives easy
+- [JSON](lang) is highly used in [Amazon](org) and [Samsung](org) for [Artificial Intelligence](tech)
+- [Whatsapp](org) and [Amazon](org) uses [Mongodb](lang) and [JSON](lang) for new development
+- [JSON](lang) and [Node js](lang) are very important for upcomimg technology
+- [Amazon](org), [Whatsapp](org) and [Samsung](org) are big companies in today's world
+- Does [Node js](lang) is used in [Game](prod) development
+- [Web development](tech) can be learned by anyone for both [Frontend development](tech) and [Backend development](tech)
+- [Facebook](org) and [Whatsapp](org) are using [Artificial Intelligence](tech) and [NLP](tech) for new projects
+- [Hewlett Packard Enterprise](org) is making new [Game](prod) and [Robot](prod) using [Unity](tech)
+- [Tablet](prod) and [Game](prod) are developed using [Unity](tech)
+- [Artificial Intelligence](tech) is used in [Tablet](prod) and [Phone](prod) for better technology
+- [robot](prod) is one huge application of [Artificial Intelligence](tech) and [Machine Learning](tech)
+- Latest [Ipad](prod) makes use of [Artificial Intelligence](tech) for better performance
+- [Javascript](lang) programmer receives decent salary in India
+- [Google](org) uses [Java](lang) programming language to build and develop docs application
+- [Apple](org) [Ipad](prod) Pro now on sale in India
+- [Backend development](tech) professionals who work on [SQL](lang) are difficult to find
+- [Frontend development](tech) users wokring on [HTML](lang), [CSS](lang) and [React js](lang) are more in number
+- using [HTML](lang), [CSS](lang), [SQL](lang), [Frontend development](tech) and [Backend development](tech) can be learnt together 
+- [Backend development](tech) and [Frontend development](tech) courses are available on net using [HTML](lang), [CSS](lang), [SQL](lang)
+- I love [Web development](tech) using [React js](lang) because it helps make responsive pages for [Frontend development](tech)
+- Using database means working for [Backend development](tech)
+- [Microsoft](org) corporation is an America based technology company
+- The main mission of [Microsoft](org) is to help people throughout the India
+- [HPE](org) is demanding latest [Chatbot](prod) using [NLP](tech)
+- [Chatbot](prod) is very common these days
+- The best application of [NLP](tech) and [Data Science](tech) is [Chatbot](prod)
+- [Docker](tech) is one of the emerging technology
+- People today are earning with the help of [Web development](tech)
+- High performance containers are developed using [Docker](tech)
+- In today's technology world, [Docker](tech) is serving a huge purpose
+- [React js](lang) is highly used in [Web development](tech)
+- Along with [HTML](lang), [React js](lang) is used for [Frontend development](tech)
+- [Web development](tech) requires [HTML](lang), [CSS](lang) and [React js](lang)
+- [SQL](lang) and [Mongodb](lang) are used for efficient [Backend development](tech)
+- [HTML](lang), [CSS](lang) and [Javascript](lang) are mainly used for frontend development
+
+
+## intent:python_link
+- From which website can I learn Python programming?
+- Suggest me some site to master coding in Python?
+- What are the best Python web tutorials?
+- Can you help me learn Python? 
+- Which website is the best for Python web tutorials?
+
+## intent:hpe_link
+- Tell me something about Hewlett Packard Enterpise official website.
+- Take me to the official site of HPE.
+- What is the official website of HPE?
+- Take me to HPE site.
+- What is the official website of Hewlett Packard Enterprise?
 
 ## intent:goodbye
 - bye
 - goodbye
 - see you around
 - see you later
+- bye bye
 
 ## intent:affirm
 - yes
@@ -160,14 +408,26 @@
 - of course
 - that sounds good
 - correct
+- I am satisfied
+- I am happy
+- perfect
+- very good
+- great
+- amazing
+- wonderful
+- ok
 
 ## intent:deny
 - no
-- never
 - I don't think so
-- don't like that
+- no,not this 
 - no way
 - not really
+- I am not satisfied
+- wrong
+- not correct
+- not satisfying
+- I am sad now
 
 ## intent:mood_great
 - perfect
