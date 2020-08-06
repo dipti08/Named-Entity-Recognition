@@ -12,105 +12,74 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 
+#ActionReplyTag recognises the required entities mentioned in the user query and 
+#thus helps in tagging
+class ActionReplyTag(Action):
 
-class ActionPythonLink(Action):
+     def name(self) -> Text:
+         return "action_reply"
 
-    def name(self) -> Text:
-        return "action_python_link"
+     def run(self, dispatcher: CollectingDispatcher,
+             tracker: Tracker,
+             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+         
+         #collecting all the entities of the query in a list
+         entities = tracker.latest_message['entities']
+         print(entities)
+         tag=None
+         message=""
+         
+         #message consists of the all the words along with their respective tags
+         for e in entities:
+             if e['entity'] == "lang":
+                 tag = e['value']
+                 message = message + tag +" - lang, "
+             elif e['entity'] == "org":
+                 tag = e['value']
+                 message = message + tag +" - org, "
+             elif e['entity'] == "tech":
+                 tag = e['value']
+                 message = message + tag +" - tech, "
+             elif e['entity'] == "prod":
+                 tag = e['value']
+                 message = message + tag +" - prod, "
+    
+         dispatcher.utter_message(text=message)        
 
-    def run(self, dispatcher: CollectingDispatcher,
-           tracker: Tracker,
-           domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+         return []
+
+
+#ActionPythonLinkTag helps the bot to reply with the suitable link to view 
+#python tutorials
+class ActionPythonLinkTag(Action):
+
+     def name(self) -> Text:
+         return "action_python_link"
+
+     def run(self, dispatcher: CollectingDispatcher,
+             tracker: Tracker,
+             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
          Link="https://www.youtube.com/watch?v=QXeEoD0pB3E&list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3"
-         #dispatcher.utter_message(text="Hello World!")
+
          dispatcher.utter_template("utter_python_link",tracker,link=Link)
 
          return []
 
-class ActionLangTag(Action):
+
+#ActionHpeLinkTag helps the bot to reply with the HPE site link
+#to help the user know more about HPE
+class ActionHpeLinkTag(Action):
 
      def name(self) -> Text:
-         return "action_lang"
+         return "action_hpe_link"
 
      def run(self, dispatcher: CollectingDispatcher,
              tracker: Tracker,
              domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-         entities = tracker.latest_message['entities']
-         print(entities)
-         lang=None
+         Link="https://www.hpe.com/in/en/home.html"
 
-         for e in entities:
-             if e['entity'] == "lang":
-                 lang = e['value']
-
-         dispatcher.utter_message(text=lang+" lang")
+         dispatcher.utter_template("utter_hpe_link",tracker,link=Link)
 
          return []
-
-class ActionOrgTag(Action):
-
-     def name(self) -> Text:
-         return "action_organisation"
-
-     def run(self, dispatcher: CollectingDispatcher,
-             tracker: Tracker,
-             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-         entities = tracker.latest_message['entities']
-         print(entities)
-         org=None
-
-         for e in entities:
-             if e['entity'] == "org":
-                 org = e['value']
-            
-         dispatcher.utter_message(text=org+" org")
-
-         return []
-
-class ActionTechTag(Action):
-
-     def name(self) -> Text:
-         return "action_technology"
-
-     def run(self, dispatcher: CollectingDispatcher,
-             tracker: Tracker,
-             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-         entities = tracker.latest_message['entities']
-         print(entities)          
-         tech=None
-
-         for e in entities:
-             if e['entity'] == "tech":
-                 tech = e['value']
-            
-         dispatcher.utter_message(text=tech+" tech")
-
-         return []
-
-class ActionProdTag(Action):
-
-     def name(self) -> Text:
-         return "action_product"
-
-     def run(self, dispatcher: CollectingDispatcher,
-             tracker: Tracker,
-             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-         entities = tracker.latest_message['entities']
-         print(entities)
-         prod=None
-
-         for e in entities:
-             if e['entity'] == "prod":
-                 prod = e['value']
-            
-         dispatcher.utter_message(text=prod+" prod")
-
-         return []
-
-
-
