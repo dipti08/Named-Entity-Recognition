@@ -9,7 +9,7 @@ import pickle
 
 
 @plac.annotations(input_file=("Input file", "option", "i", str), output_file=("Output file", "option", "o", str))
-def main(input_file=r'C:\Users\DIPTI AGARWAL\Desktop\robot\spacy_ner\dataset1.json', output_file=r'C:\Users\DIPTI AGARWAL\Desktop\robot\spacy_ner\dataset1_spacy.json'):
+def main(input_file=r'C:\Users\Ayushi\Desktop\Ayushi\HPE\\dataset1.json', output_file=r'C:\Users\Ayushi\Desktop\Ayushi\HPE\\dataset1_spacy.json'):
     try:
         training_data = []
         lines = []
