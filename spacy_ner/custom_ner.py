@@ -19,7 +19,7 @@ LABEL = ['I-geo', 'B-geo', 'I-art', 'B-art', 'B-tim', 'B-nat', 'B-eve', 'O', 'I-
 
 
 # Loading training data
-with open(r'C:\Users\DIPTI AGARWAL\Desktop\robot\spacy_ner\\dataset1_spacy.json', 'rb') as fp:
+with open(r'C:\Users\Ayushi\Desktop\Ayushi\HPE\\dataset1_spacy.json', 'rb') as fp:
     TRAIN_DATA = pickle.load(fp)
 
 
@@ -28,7 +28,7 @@ with open(r'C:\Users\DIPTI AGARWAL\Desktop\robot\spacy_ner\\dataset1_spacy.json'
     new_model_name=("New model name for model meta.", "option", "nm", str),
     output_dir=("Optional output directory", "option", "o", Path),
     n_iter=("Number of training iterations", "option", "n", int))
-def main(model=None, new_model_name='new_model', output_dir=r'C:\Users\DIPTI AGARWAL\Desktop\robot\spacy_ner\spacy saved model', n_iter=20):
+def main(model=None, new_model_name='new_model', output_dir=r'C:\Users\Ayushi\Desktop\Ayushi\HPE\spacy saved model', n_iter=20):
     """Setting up the pipeline and entity recognizer, and training the new entity."""
     if model is not None:
         nlp = spacy.load(model)  # load existing spacy model
